@@ -83,6 +83,10 @@ public class TypeScriptGenerator {
  		 	«generateGetters(attr)»
  		«ENDFOR»
  		
+ 		«FOR ref : kls.EReferences»
+ 		 	«generateGetters(ref)»
+ 		«ENDFOR»
+ 		 		
  		
  		 		
  		toJSON(){
@@ -168,24 +172,53 @@ public class TypeScriptGenerator {
  '''
 
  def dispatch generateGetters(EAttribute attr) '''
- 	 get«attr.name.toFirstUpper»(){
+ 	 «IF attr.upperBound == 1»
+ 	 get«attr.name.toFirstUpper»() : «attr.EType.name»{
  	 	return this.«attr.name»
  	 }
- 	 
+ 	 «ELSE»
+ 	  get«attr.name.toFirstUpper»(): «attr.EType.name»[] {
+ 	  	 	return this.«attr.name»
+ 	  	 }
+ 	 «ENDIF»
+ 	  
  	 «IF attr.upperBound == 1»
  	 	set«attr.name.toFirstUpper»(«attr.name» : «attr.EType.name»){
- 	  		 this.«attr.name» = «attr.name»;
- 	  		 return this;
+ 	  		this.«attr.name» = «attr.name»;
+ 	  		return this;
  	 	}
  	 «ELSE»
  	 	set«attr.name.toFirstUpper»(«attr.name» : «attr.EType.name»[]){
- 	 	 	  this.«attr.name» = «attr.name»;
+ 	 		this.«attr.name» = «attr.name»;
+ 	 		return this;
+ 	 	}
+ 	 «ENDIF»
+ '''
+ 
+def dispatch generateGetters(EReference ref) '''
+ 	 «IF ref.upperBound == 1»
+ 	 get«ref.name.toFirstUpper»() : «ref.EType.name»{
+ 	  	return this.«ref.name»
+ 	 }
+ 	  «ELSE»
+ 	 get«ref.name.toFirstUpper»(): «ref.EType.name»[] {
+ 	 	return this.«ref.name»
+ 	 }
+ 	 «ENDIF»
+ 	 
+ 	 «IF ref.upperBound == 1»
+ 	 	set«ref.name.toFirstUpper»(«ref.name» : «ref.EType.name»){
+ 	  		 this.«ref.name» = «ref.name»;
+ 	  		 return this;
+ 	 	}
+ 	 «ELSE»
+ 	 	set«ref.name.toFirstUpper»(«ref.name» : «ref.EType.name»[]){
+ 	 	 	  this.«ref.name» = «ref.name»;
  	 	 	  return this;
  	 	 }
  	 «ENDIF»
  '''
  
-
   def doEMFSetup() {
     Resource.Factory.Registry.INSTANCE.extensionToFactoryMap.put("ecore", new XMIResourceFactoryImpl);
    	

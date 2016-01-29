@@ -18,79 +18,136 @@
     	private regs : Regs;
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getTest(){
+    	getTest() : EnumTest{
     		return this.test
     	}
-    	
+    	 
     	setTest(test : EnumTest){
-    	 	  		 this.test = test;
-    	 	  		 return this;
+    	 	  		this.test = test;
+    	 	  		return this;
     	}
-    	getAt(){
+    	getAt() : EnumAuctionType{
     		return this.at
     	}
-    	
+    	 
     	setAt(at : EnumAuctionType){
-    	 	  		 this.at = at;
-    	 	  		 return this;
+    	 	  		this.at = at;
+    	 	  		return this;
     	}
-    	getTmax(){
+    	getTmax() : integer{
     		return this.tmax
     	}
-    	
+    	 
     	setTmax(tmax : integer){
-    	 	  		 this.tmax = tmax;
-    	 	  		 return this;
+    	 	  		this.tmax = tmax;
+    	 	  		return this;
     	}
-    	getWseat(){
-    		return this.wseat
-    	}
-    	
+    	getWseat(): string[] {
+    		 	return this.wseat
+    		 }
+    	 
     	setWseat(wseat : string[]){
-    	 	  this.wseat = wseat;
-    	 	  return this;
-    	 }
-    	getAllimps(){
+    		this.wseat = wseat;
+    		return this;
+    	}
+    	getAllimps() : EnumAllImp{
     		return this.allimps
     	}
-    	
+    	 
     	setAllimps(allimps : EnumAllImp){
-    	 	  		 this.allimps = allimps;
+    	 	  		this.allimps = allimps;
+    	 	  		return this;
+    	}
+    	getCur(): EnumIso4217[] {
+    		 	return this.cur
+    		 }
+    	 
+    	setCur(cur : EnumIso4217[]){
+    		this.cur = cur;
+    		return this;
+    	}
+    	getBcat(): EnumContentCategory[] {
+    		 	return this.bcat
+    		 }
+    	 
+    	setBcat(bcat : EnumContentCategory[]){
+    		this.bcat = bcat;
+    		return this;
+    	}
+    	getBadv(): string[] {
+    		 	return this.badv
+    		 }
+    	 
+    	setBadv(badv : string[]){
+    		this.badv = badv;
+    		return this;
+    	}
+    	
+    	getImp(): Imp[] {
+    		return this.imp
+    	}
+    	
+    	setImp(imp : Imp[]){
+    	 	  this.imp = imp;
+    	 	  return this;
+    	 }
+    	getSite() : Site{
+    	 	return this.site
+    	}
+    	
+    	setSite(site : Site){
+    	 	  		 this.site = site;
     	 	  		 return this;
     	}
-    	getCur(){
-    		return this.cur
+    	getApp() : App{
+    	 	return this.app
     	}
     	
-    	setCur(cur : EnumIso4217[]){
-    	 	  this.cur = cur;
-    	 	  return this;
-    	 }
-    	getBcat(){
-    		return this.bcat
+    	setApp(app : App){
+    	 	  		 this.app = app;
+    	 	  		 return this;
+    	}
+    	getDevice() : Device{
+    	 	return this.device
     	}
     	
-    	setBcat(bcat : EnumContentCategory[]){
-    	 	  this.bcat = bcat;
-    	 	  return this;
-    	 }
-    	getBadv(){
-    		return this.badv
+    	setDevice(device : Device){
+    	 	  		 this.device = device;
+    	 	  		 return this;
+    	}
+    	getUser() : User{
+    	 	return this.user
     	}
     	
-    	setBadv(badv : string[]){
-    	 	  this.badv = badv;
-    	 	  return this;
-    	 }
+    	setUser(user : User){
+    	 	  		 this.user = user;
+    	 	  		 return this;
+    	}
+    	getRegs() : Regs{
+    	 	return this.regs
+    	}
     	
+    	setRegs(regs : Regs){
+    	 	  		 this.regs = regs;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -294,71 +351,112 @@
     	private pmp : Pmp;
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getDisplaymanager(){
+    	getDisplaymanager() : string{
     		return this.displaymanager
     	}
-    	
+    	 
     	setDisplaymanager(displaymanager : string){
-    	 	  		 this.displaymanager = displaymanager;
-    	 	  		 return this;
+    	 	  		this.displaymanager = displaymanager;
+    	 	  		return this;
     	}
-    	getDisplaymanagerserver(){
+    	getDisplaymanagerserver() : string{
     		return this.displaymanagerserver
     	}
-    	
+    	 
     	setDisplaymanagerserver(displaymanagerserver : string){
-    	 	  		 this.displaymanagerserver = displaymanagerserver;
-    	 	  		 return this;
+    	 	  		this.displaymanagerserver = displaymanagerserver;
+    	 	  		return this;
     	}
-    	getInstl(){
+    	getInstl() : EnumInterstitial{
     		return this.instl
     	}
-    	
+    	 
     	setInstl(instl : EnumInterstitial){
-    	 	  		 this.instl = instl;
-    	 	  		 return this;
+    	 	  		this.instl = instl;
+    	 	  		return this;
     	}
-    	getTagid(){
+    	getTagid() : string{
     		return this.tagid
     	}
-    	
+    	 
     	setTagid(tagid : string){
-    	 	  		 this.tagid = tagid;
-    	 	  		 return this;
+    	 	  		this.tagid = tagid;
+    	 	  		return this;
     	}
-    	getBidfloor(){
+    	getBidfloor() : integer{
     		return this.bidfloor
     	}
-    	
+    	 
     	setBidfloor(bidfloor : integer){
-    	 	  		 this.bidfloor = bidfloor;
-    	 	  		 return this;
+    	 	  		this.bidfloor = bidfloor;
+    	 	  		return this;
     	}
-    	getBidfloorcur(){
+    	getBidfloorcur() : EnumIso4217{
     		return this.bidfloorcur
     	}
-    	
+    	 
     	setBidfloorcur(bidfloorcur : EnumIso4217){
-    	 	  		 this.bidfloorcur = bidfloorcur;
+    	 	  		this.bidfloorcur = bidfloorcur;
+    	 	  		return this;
+    	}
+    	getIframebuster(): string[] {
+    		 	return this.iframebuster
+    		 }
+    	 
+    	setIframebuster(iframebuster : string[]){
+    		this.iframebuster = iframebuster;
+    		return this;
+    	}
+    	
+    	getBanner() : Banner{
+    	 	return this.banner
+    	}
+    	
+    	setBanner(banner : Banner){
+    	 	  		 this.banner = banner;
     	 	  		 return this;
     	}
-    	getIframebuster(){
-    		return this.iframebuster
+    	getVideo() : Video{
+    	 	return this.video
     	}
     	
-    	setIframebuster(iframebuster : string[]){
-    	 	  this.iframebuster = iframebuster;
-    	 	  return this;
-    	 }
+    	setVideo(video : Video){
+    	 	  		 this.video = video;
+    	 	  		 return this;
+    	}
+    	getNative() : Native{
+    	 	return this.native
+    	}
     	
+    	setNative(native : Native){
+    	 	  		 this.native = native;
+    	 	  		 return this;
+    	}
+    	getPmp() : Pmp{
+    	 	return this.pmp
+    	}
+    	
+    	setPmp(pmp : Pmp){
+    	 	  		 this.pmp = pmp;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -516,119 +614,128 @@
     	
     	private ext : Any;
     	 		
-    	getW(){
+    	getW() : integer{
     		return this.w
     	}
-    	
+    	 
     	setW(w : integer){
-    	 	  		 this.w = w;
-    	 	  		 return this;
+    	 	  		this.w = w;
+    	 	  		return this;
     	}
-    	getH(){
+    	getH() : integer{
     		return this.h
     	}
-    	
+    	 
     	setH(h : integer){
-    	 	  		 this.h = h;
-    	 	  		 return this;
+    	 	  		this.h = h;
+    	 	  		return this;
     	}
-    	getWmax(){
+    	getWmax() : integer{
     		return this.wmax
     	}
-    	
+    	 
     	setWmax(wmax : integer){
-    	 	  		 this.wmax = wmax;
-    	 	  		 return this;
+    	 	  		this.wmax = wmax;
+    	 	  		return this;
     	}
-    	getHmax(){
+    	getHmax() : integer{
     		return this.hmax
     	}
-    	
+    	 
     	setHmax(hmax : integer){
-    	 	  		 this.hmax = hmax;
-    	 	  		 return this;
+    	 	  		this.hmax = hmax;
+    	 	  		return this;
     	}
-    	getWmin(){
+    	getWmin() : integer{
     		return this.wmin
     	}
-    	
+    	 
     	setWmin(wmin : integer){
-    	 	  		 this.wmin = wmin;
-    	 	  		 return this;
+    	 	  		this.wmin = wmin;
+    	 	  		return this;
     	}
-    	getHmin(){
+    	getHmin() : integer{
     		return this.hmin
     	}
-    	
+    	 
     	setHmin(hmin : integer){
-    	 	  		 this.hmin = hmin;
-    	 	  		 return this;
+    	 	  		this.hmin = hmin;
+    	 	  		return this;
     	}
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getBtype(){
-    		return this.btype
-    	}
-    	
+    	getBtype(): integer[] {
+    		 	return this.btype
+    		 }
+    	 
     	setBtype(btype : integer[]){
-    	 	  this.btype = btype;
-    	 	  return this;
-    	 }
-    	getBattr(){
-    		return this.battr
+    		this.btype = btype;
+    		return this;
     	}
-    	
+    	getBattr(): integer[] {
+    		 	return this.battr
+    		 }
+    	 
     	setBattr(battr : integer[]){
-    	 	  this.battr = battr;
-    	 	  return this;
-    	 }
-    	getPos(){
+    		this.battr = battr;
+    		return this;
+    	}
+    	getPos() : integer{
     		return this.pos
     	}
-    	
+    	 
     	setPos(pos : integer){
-    	 	  		 this.pos = pos;
-    	 	  		 return this;
+    	 	  		this.pos = pos;
+    	 	  		return this;
     	}
-    	getMines(){
-    		return this.mines
-    	}
-    	
+    	getMines(): string[] {
+    		 	return this.mines
+    		 }
+    	 
     	setMines(mines : string[]){
-    	 	  this.mines = mines;
-    	 	  return this;
-    	 }
-    	getTopframe(){
+    		this.mines = mines;
+    		return this;
+    	}
+    	getTopframe() : integer{
     		return this.topframe
     	}
-    	
+    	 
     	setTopframe(topframe : integer){
-    	 	  		 this.topframe = topframe;
+    	 	  		this.topframe = topframe;
+    	 	  		return this;
+    	}
+    	getExpdir(): integer[] {
+    		 	return this.expdir
+    		 }
+    	 
+    	setExpdir(expdir : integer[]){
+    		this.expdir = expdir;
+    		return this;
+    	}
+    	getApi(): integer[] {
+    		 	return this.api
+    		 }
+    	 
+    	setApi(api : integer[]){
+    		this.api = api;
+    		return this;
+    	}
+    	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
     	 	  		 return this;
     	}
-    	getExpdir(){
-    		return this.expdir
-    	}
-    	
-    	setExpdir(expdir : integer[]){
-    	 	  this.expdir = expdir;
-    	 	  return this;
-    	 }
-    	getApi(){
-    		return this.api
-    	}
-    	
-    	setApi(api : integer[]){
-    	 	  this.api = api;
-    	 	  return this;
-    	 }
-    	
+    	 		
     	
     	 		
     	toJSON(){
@@ -805,167 +912,184 @@
     	private companionad : Banner[];
     	private ext : Any;
     	 		
-    	getMimes(){
-    		return this.mimes
-    	}
-    	
+    	getMimes(): string[] {
+    		 	return this.mimes
+    		 }
+    	 
     	setMimes(mimes : string[]){
-    	 	  this.mimes = mimes;
-    	 	  return this;
-    	 }
-    	getMinduration(){
+    		this.mimes = mimes;
+    		return this;
+    	}
+    	getMinduration() : integer{
     		return this.minduration
     	}
-    	
+    	 
     	setMinduration(minduration : integer){
-    	 	  		 this.minduration = minduration;
-    	 	  		 return this;
+    	 	  		this.minduration = minduration;
+    	 	  		return this;
     	}
-    	getMaxduration(){
+    	getMaxduration() : integer{
     		return this.maxduration
     	}
-    	
+    	 
     	setMaxduration(maxduration : integer){
-    	 	  		 this.maxduration = maxduration;
-    	 	  		 return this;
+    	 	  		this.maxduration = maxduration;
+    	 	  		return this;
     	}
-    	getProtocol(){
+    	getProtocol() : EnumVideoBidResponseProtocol{
     		return this.protocol
     	}
-    	
+    	 
     	setProtocol(protocol : EnumVideoBidResponseProtocol){
-    	 	  		 this.protocol = protocol;
-    	 	  		 return this;
+    	 	  		this.protocol = protocol;
+    	 	  		return this;
     	}
-    	getProtocols(){
-    		return this.protocols
-    	}
-    	
+    	getProtocols(): EnumVideoBidResponseProtocol[] {
+    		 	return this.protocols
+    		 }
+    	 
     	setProtocols(protocols : EnumVideoBidResponseProtocol[]){
-    	 	  this.protocols = protocols;
-    	 	  return this;
-    	 }
-    	getW(){
+    		this.protocols = protocols;
+    		return this;
+    	}
+    	getW() : integer{
     		return this.w
     	}
-    	
+    	 
     	setW(w : integer){
-    	 	  		 this.w = w;
-    	 	  		 return this;
+    	 	  		this.w = w;
+    	 	  		return this;
     	}
-    	getH(){
+    	getH() : integer{
     		return this.h
     	}
-    	
+    	 
     	setH(h : integer){
-    	 	  		 this.h = h;
-    	 	  		 return this;
+    	 	  		this.h = h;
+    	 	  		return this;
     	}
-    	getStartdelay(){
+    	getStartdelay() : integer{
     		return this.startdelay
     	}
-    	
+    	 
     	setStartdelay(startdelay : integer){
-    	 	  		 this.startdelay = startdelay;
-    	 	  		 return this;
+    	 	  		this.startdelay = startdelay;
+    	 	  		return this;
     	}
-    	getLinearity(){
+    	getLinearity() : integer{
     		return this.linearity
     	}
-    	
+    	 
     	setLinearity(linearity : integer){
-    	 	  		 this.linearity = linearity;
-    	 	  		 return this;
+    	 	  		this.linearity = linearity;
+    	 	  		return this;
     	}
-    	getSequence(){
+    	getSequence() : integer{
     		return this.sequence
     	}
-    	
+    	 
     	setSequence(sequence : integer){
-    	 	  		 this.sequence = sequence;
-    	 	  		 return this;
+    	 	  		this.sequence = sequence;
+    	 	  		return this;
     	}
-    	getBattr(){
-    		return this.battr
-    	}
-    	
+    	getBattr(): EnumCreativeAttribute[] {
+    		 	return this.battr
+    		 }
+    	 
     	setBattr(battr : EnumCreativeAttribute[]){
-    	 	  this.battr = battr;
-    	 	  return this;
-    	 }
-    	getMaxextended(){
+    		this.battr = battr;
+    		return this;
+    	}
+    	getMaxextended() : integer{
     		return this.maxextended
     	}
-    	
+    	 
     	setMaxextended(maxextended : integer){
-    	 	  		 this.maxextended = maxextended;
-    	 	  		 return this;
+    	 	  		this.maxextended = maxextended;
+    	 	  		return this;
     	}
-    	getMinbitrate(){
+    	getMinbitrate() : integer{
     		return this.minbitrate
     	}
-    	
+    	 
     	setMinbitrate(minbitrate : integer){
-    	 	  		 this.minbitrate = minbitrate;
-    	 	  		 return this;
+    	 	  		this.minbitrate = minbitrate;
+    	 	  		return this;
     	}
-    	getMaxbitrate(){
+    	getMaxbitrate() : integer{
     		return this.maxbitrate
     	}
-    	
+    	 
     	setMaxbitrate(maxbitrate : integer){
-    	 	  		 this.maxbitrate = maxbitrate;
-    	 	  		 return this;
+    	 	  		this.maxbitrate = maxbitrate;
+    	 	  		return this;
     	}
-    	getBoxingallowed(){
+    	getBoxingallowed() : integer{
     		return this.boxingallowed
     	}
-    	
+    	 
     	setBoxingallowed(boxingallowed : integer){
-    	 	  		 this.boxingallowed = boxingallowed;
-    	 	  		 return this;
+    	 	  		this.boxingallowed = boxingallowed;
+    	 	  		return this;
     	}
-    	getPlaybackmethod(){
+    	getPlaybackmethod() : integer{
     		return this.playbackmethod
     	}
-    	
+    	 
     	setPlaybackmethod(playbackmethod : integer){
-    	 	  		 this.playbackmethod = playbackmethod;
-    	 	  		 return this;
+    	 	  		this.playbackmethod = playbackmethod;
+    	 	  		return this;
     	}
-    	getDelivery(){
-    		return this.delivery
-    	}
-    	
+    	getDelivery(): EnumContentDeliveryMethod[] {
+    		 	return this.delivery
+    		 }
+    	 
     	setDelivery(delivery : EnumContentDeliveryMethod[]){
-    	 	  this.delivery = delivery;
-    	 	  return this;
-    	 }
-    	getPos(){
+    		this.delivery = delivery;
+    		return this;
+    	}
+    	getPos() : integer{
     		return this.pos
     	}
-    	
+    	 
     	setPos(pos : integer){
-    	 	  		 this.pos = pos;
+    	 	  		this.pos = pos;
+    	 	  		return this;
+    	}
+    	getApi(): EnumApiFramework[] {
+    		 	return this.api
+    		 }
+    	 
+    	setApi(api : EnumApiFramework[]){
+    		this.api = api;
+    		return this;
+    	}
+    	getCompaniontype(): EnumVastCompanionType[] {
+    		 	return this.companiontype
+    		 }
+    	 
+    	setCompaniontype(companiontype : EnumVastCompanionType[]){
+    		this.companiontype = companiontype;
+    		return this;
+    	}
+    	
+    	getCompanionad(): Banner[] {
+    		return this.companionad
+    	}
+    	
+    	setCompanionad(companionad : Banner[]){
+    	 	  this.companionad = companionad;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
     	 	  		 return this;
     	}
-    	getApi(){
-    		return this.api
-    	}
-    	
-    	setApi(api : EnumApiFramework[]){
-    	 	  this.api = api;
-    	 	  return this;
-    	 }
-    	getCompaniontype(){
-    		return this.companiontype
-    	}
-    	
-    	setCompaniontype(companiontype : EnumVastCompanionType[]){
-    	 	  this.companiontype = companiontype;
-    	 	  return this;
-    	 }
-    	
+    	 		
     	
     	 		
     	toJSON(){
@@ -1195,39 +1319,48 @@
     	
     	private ext : Any;
     	 		
-    	getRequest(){
+    	getRequest() : string{
     		return this.request
     	}
-    	
+    	 
     	setRequest(request : string){
-    	 	  		 this.request = request;
-    	 	  		 return this;
+    	 	  		this.request = request;
+    	 	  		return this;
     	}
-    	getVer(){
+    	getVer() : string{
     		return this.ver
     	}
-    	
+    	 
     	setVer(ver : string){
-    	 	  		 this.ver = ver;
+    	 	  		this.ver = ver;
+    	 	  		return this;
+    	}
+    	getApi(): EnumApiFramework[] {
+    		 	return this.api
+    		 }
+    	 
+    	setApi(api : EnumApiFramework[]){
+    		this.api = api;
+    		return this;
+    	}
+    	getBattr(): EnumCreativeAttribute[] {
+    		 	return this.battr
+    		 }
+    	 
+    	setBattr(battr : EnumCreativeAttribute[]){
+    		this.battr = battr;
+    		return this;
+    	}
+    	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
     	 	  		 return this;
     	}
-    	getApi(){
-    		return this.api
-    	}
-    	
-    	setApi(api : EnumApiFramework[]){
-    	 	  this.api = api;
-    	 	  return this;
-    	 }
-    	getBattr(){
-    		return this.battr
-    	}
-    	
-    	setBattr(battr : EnumCreativeAttribute[]){
-    	 	  this.battr = battr;
-    	 	  return this;
-    	 }
-    	
+    	 		
     	
     	 		
     	toJSON(){
@@ -1308,103 +1441,128 @@
     	private content : Content;
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
-    	getDomain(){
+    	getDomain() : string{
     		return this.domain
     	}
-    	
+    	 
     	setDomain(domain : string){
-    	 	  		 this.domain = domain;
-    	 	  		 return this;
+    	 	  		this.domain = domain;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getSectioncat(){
-    		return this.sectioncat
+    		this.cat = cat;
+    		return this;
     	}
-    	
+    	getSectioncat(): EnumContentCategory[] {
+    		 	return this.sectioncat
+    		 }
+    	 
     	setSectioncat(sectioncat : EnumContentCategory[]){
-    	 	  this.sectioncat = sectioncat;
-    	 	  return this;
-    	 }
-    	getPagecat(){
-    		return this.pagecat
+    		this.sectioncat = sectioncat;
+    		return this;
     	}
-    	
+    	getPagecat(): EnumContentCategory[] {
+    		 	return this.pagecat
+    		 }
+    	 
     	setPagecat(pagecat : EnumContentCategory[]){
-    	 	  this.pagecat = pagecat;
-    	 	  return this;
-    	 }
-    	getPage(){
+    		this.pagecat = pagecat;
+    		return this;
+    	}
+    	getPage() : string{
     		return this.page
     	}
-    	
+    	 
     	setPage(page : string){
-    	 	  		 this.page = page;
-    	 	  		 return this;
+    	 	  		this.page = page;
+    	 	  		return this;
     	}
-    	getRef(){
+    	getRef() : string{
     		return this.ref
     	}
-    	
+    	 
     	setRef(ref : string){
-    	 	  		 this.ref = ref;
-    	 	  		 return this;
+    	 	  		this.ref = ref;
+    	 	  		return this;
     	}
-    	getSearch(){
+    	getSearch() : string{
     		return this.search
     	}
-    	
+    	 
     	setSearch(search : string){
-    	 	  		 this.search = search;
-    	 	  		 return this;
+    	 	  		this.search = search;
+    	 	  		return this;
     	}
-    	getMobile(){
+    	getMobile() : integer{
     		return this.mobile
     	}
-    	
+    	 
     	setMobile(mobile : integer){
-    	 	  		 this.mobile = mobile;
-    	 	  		 return this;
+    	 	  		this.mobile = mobile;
+    	 	  		return this;
     	}
-    	getPrivacypolicy(){
+    	getPrivacypolicy() : integer{
     		return this.privacypolicy
     	}
-    	
+    	 
     	setPrivacypolicy(privacypolicy : integer){
-    	 	  		 this.privacypolicy = privacypolicy;
-    	 	  		 return this;
+    	 	  		this.privacypolicy = privacypolicy;
+    	 	  		return this;
     	}
-    	getKeywords(){
+    	getKeywords() : string{
     		return this.keywords
     	}
-    	
+    	 
     	setKeywords(keywords : string){
-    	 	  		 this.keywords = keywords;
-    	 	  		 return this;
+    	 	  		this.keywords = keywords;
+    	 	  		return this;
     	}
     	
+    	getPublisher() : Publisher{
+    	 	return this.publisher
+    	}
+    	
+    	setPublisher(publisher : Publisher){
+    	 	  		 this.publisher = publisher;
+    	 	  		 return this;
+    	}
+    	getContent() : Content{
+    	 	return this.content
+    	}
+    	
+    	setContent(content : Content){
+    	 	  		 this.content = content;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -1576,103 +1734,128 @@
     	private content : Content;
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
-    	getBundle(){
+    	getBundle() : string{
     		return this.bundle
     	}
-    	
+    	 
     	setBundle(bundle : string){
-    	 	  		 this.bundle = bundle;
-    	 	  		 return this;
+    	 	  		this.bundle = bundle;
+    	 	  		return this;
     	}
-    	getDomain(){
+    	getDomain() : string{
     		return this.domain
     	}
-    	
+    	 
     	setDomain(domain : string){
-    	 	  		 this.domain = domain;
-    	 	  		 return this;
+    	 	  		this.domain = domain;
+    	 	  		return this;
     	}
-    	getStoreurl(){
+    	getStoreurl() : string{
     		return this.storeurl
     	}
-    	
+    	 
     	setStoreurl(storeurl : string){
-    	 	  		 this.storeurl = storeurl;
-    	 	  		 return this;
+    	 	  		this.storeurl = storeurl;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getSectioncat(){
-    		return this.sectioncat
+    		this.cat = cat;
+    		return this;
     	}
-    	
+    	getSectioncat(): EnumContentCategory[] {
+    		 	return this.sectioncat
+    		 }
+    	 
     	setSectioncat(sectioncat : EnumContentCategory[]){
-    	 	  this.sectioncat = sectioncat;
-    	 	  return this;
-    	 }
-    	getPagecat(){
-    		return this.pagecat
+    		this.sectioncat = sectioncat;
+    		return this;
     	}
-    	
+    	getPagecat(): EnumContentCategory[] {
+    		 	return this.pagecat
+    		 }
+    	 
     	setPagecat(pagecat : EnumContentCategory[]){
-    	 	  this.pagecat = pagecat;
-    	 	  return this;
-    	 }
-    	getVer(){
+    		this.pagecat = pagecat;
+    		return this;
+    	}
+    	getVer() : string{
     		return this.ver
     	}
-    	
+    	 
     	setVer(ver : string){
-    	 	  		 this.ver = ver;
-    	 	  		 return this;
+    	 	  		this.ver = ver;
+    	 	  		return this;
     	}
-    	getPrivacypolicy(){
+    	getPrivacypolicy() : integer{
     		return this.privacypolicy
     	}
-    	
+    	 
     	setPrivacypolicy(privacypolicy : integer){
-    	 	  		 this.privacypolicy = privacypolicy;
-    	 	  		 return this;
+    	 	  		this.privacypolicy = privacypolicy;
+    	 	  		return this;
     	}
-    	getPaid(){
+    	getPaid() : integer{
     		return this.paid
     	}
-    	
+    	 
     	setPaid(paid : integer){
-    	 	  		 this.paid = paid;
-    	 	  		 return this;
+    	 	  		this.paid = paid;
+    	 	  		return this;
     	}
-    	getKeywords(){
+    	getKeywords() : string{
     		return this.keywords
     	}
-    	
+    	 
     	setKeywords(keywords : string){
-    	 	  		 this.keywords = keywords;
-    	 	  		 return this;
+    	 	  		this.keywords = keywords;
+    	 	  		return this;
     	}
     	
+    	getUser() : Publisher{
+    	 	return this.user
+    	}
+    	
+    	setUser(user : Publisher){
+    	 	  		 this.user = user;
+    	 	  		 return this;
+    	}
+    	getContent() : Content{
+    	 	return this.content
+    	}
+    	
+    	setContent(content : Content){
+    	 	  		 this.content = content;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -1834,39 +2017,48 @@
     	
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getDomain(){
+    		this.cat = cat;
+    		return this;
+    	}
+    	getDomain() : string{
     		return this.domain
     	}
-    	
+    	 
     	setDomain(domain : string){
-    	 	  		 this.domain = domain;
-    	 	  		 return this;
+    	 	  		this.domain = domain;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -1949,151 +2141,168 @@
     	private producer : Producer;
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getEpisode(){
+    	getEpisode() : integer{
     		return this.episode
     	}
-    	
+    	 
     	setEpisode(episode : integer){
-    	 	  		 this.episode = episode;
-    	 	  		 return this;
+    	 	  		this.episode = episode;
+    	 	  		return this;
     	}
-    	getTitle(){
+    	getTitle() : string{
     		return this.title
     	}
-    	
+    	 
     	setTitle(title : string){
-    	 	  		 this.title = title;
-    	 	  		 return this;
+    	 	  		this.title = title;
+    	 	  		return this;
     	}
-    	getSeries(){
+    	getSeries() : string{
     		return this.series
     	}
-    	
+    	 
     	setSeries(series : string){
-    	 	  		 this.series = series;
-    	 	  		 return this;
+    	 	  		this.series = series;
+    	 	  		return this;
     	}
-    	getSeason(){
+    	getSeason() : string{
     		return this.season
     	}
-    	
+    	 
     	setSeason(season : string){
-    	 	  		 this.season = season;
-    	 	  		 return this;
+    	 	  		this.season = season;
+    	 	  		return this;
     	}
-    	getUrl(){
+    	getUrl() : string{
     		return this.url
     	}
-    	
+    	 
     	setUrl(url : string){
-    	 	  		 this.url = url;
-    	 	  		 return this;
+    	 	  		this.url = url;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getVideoquality(){
+    		this.cat = cat;
+    		return this;
+    	}
+    	getVideoquality() : EnumVideoQuality{
     		return this.videoquality
     	}
-    	
+    	 
     	setVideoquality(videoquality : EnumVideoQuality){
-    	 	  		 this.videoquality = videoquality;
-    	 	  		 return this;
+    	 	  		this.videoquality = videoquality;
+    	 	  		return this;
     	}
-    	getContext(){
+    	getContext() : EnumContentContext{
     		return this.context
     	}
-    	
+    	 
     	setContext(context : EnumContentContext){
-    	 	  		 this.context = context;
-    	 	  		 return this;
+    	 	  		this.context = context;
+    	 	  		return this;
     	}
-    	getContentrating(){
+    	getContentrating() : string{
     		return this.contentrating
     	}
-    	
+    	 
     	setContentrating(contentrating : string){
-    	 	  		 this.contentrating = contentrating;
-    	 	  		 return this;
+    	 	  		this.contentrating = contentrating;
+    	 	  		return this;
     	}
-    	getUserrating(){
+    	getUserrating() : string{
     		return this.userrating
     	}
-    	
+    	 
     	setUserrating(userrating : string){
-    	 	  		 this.userrating = userrating;
-    	 	  		 return this;
+    	 	  		this.userrating = userrating;
+    	 	  		return this;
     	}
-    	getQamediarating(){
+    	getQamediarating() : EnumQagMediaRating{
     		return this.qamediarating
     	}
-    	
+    	 
     	setQamediarating(qamediarating : EnumQagMediaRating){
-    	 	  		 this.qamediarating = qamediarating;
-    	 	  		 return this;
+    	 	  		this.qamediarating = qamediarating;
+    	 	  		return this;
     	}
-    	getKeywords(){
+    	getKeywords() : string{
     		return this.keywords
     	}
-    	
+    	 
     	setKeywords(keywords : string){
-    	 	  		 this.keywords = keywords;
-    	 	  		 return this;
+    	 	  		this.keywords = keywords;
+    	 	  		return this;
     	}
-    	getLivestream(){
+    	getLivestream() : integer{
     		return this.livestream
     	}
-    	
+    	 
     	setLivestream(livestream : integer){
-    	 	  		 this.livestream = livestream;
-    	 	  		 return this;
+    	 	  		this.livestream = livestream;
+    	 	  		return this;
     	}
-    	getSourcerelationship(){
+    	getSourcerelationship() : integer{
     		return this.sourcerelationship
     	}
-    	
+    	 
     	setSourcerelationship(sourcerelationship : integer){
-    	 	  		 this.sourcerelationship = sourcerelationship;
-    	 	  		 return this;
+    	 	  		this.sourcerelationship = sourcerelationship;
+    	 	  		return this;
     	}
-    	getLen(){
+    	getLen() : integer{
     		return this.len
     	}
-    	
+    	 
     	setLen(len : integer){
-    	 	  		 this.len = len;
-    	 	  		 return this;
+    	 	  		this.len = len;
+    	 	  		return this;
     	}
-    	getLanguage(){
+    	getLanguage() : EnumIso639_1a2{
     		return this.language
     	}
-    	
+    	 
     	setLanguage(language : EnumIso639_1a2){
-    	 	  		 this.language = language;
-    	 	  		 return this;
+    	 	  		this.language = language;
+    	 	  		return this;
     	}
-    	getEmbeddable(){
+    	getEmbeddable() : integer{
     		return this.embeddable
     	}
-    	
+    	 
     	setEmbeddable(embeddable : integer){
-    	 	  		 this.embeddable = embeddable;
-    	 	  		 return this;
+    	 	  		this.embeddable = embeddable;
+    	 	  		return this;
     	}
     	
+    	getProducer() : Producer{
+    	 	return this.producer
+    	}
+    	
+    	setProducer(producer : Producer){
+    	 	  		 this.producer = producer;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -2285,39 +2494,48 @@
     	
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getDomain(){
+    		this.cat = cat;
+    		return this;
+    	}
+    	getDomain() : string{
     		return this.domain
     	}
-    	
+    	 
     	setDomain(domain : string){
-    	 	  		 this.domain = domain;
-    	 	  		 return this;
+    	 	  		this.domain = domain;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -2408,215 +2626,232 @@
     	private geo : Geo;
     	private ext : Any;
     	 		
-    	getUa(){
+    	getUa() : string{
     		return this.ua
     	}
-    	
+    	 
     	setUa(ua : string){
-    	 	  		 this.ua = ua;
-    	 	  		 return this;
+    	 	  		this.ua = ua;
+    	 	  		return this;
     	}
-    	getDnt(){
+    	getDnt() : integer{
     		return this.dnt
     	}
-    	
+    	 
     	setDnt(dnt : integer){
-    	 	  		 this.dnt = dnt;
-    	 	  		 return this;
+    	 	  		this.dnt = dnt;
+    	 	  		return this;
     	}
-    	getLmt(){
+    	getLmt() : integer{
     		return this.lmt
     	}
-    	
+    	 
     	setLmt(lmt : integer){
-    	 	  		 this.lmt = lmt;
-    	 	  		 return this;
+    	 	  		this.lmt = lmt;
+    	 	  		return this;
     	}
-    	getIp(){
+    	getIp() : string{
     		return this.ip
     	}
-    	
+    	 
     	setIp(ip : string){
-    	 	  		 this.ip = ip;
-    	 	  		 return this;
+    	 	  		this.ip = ip;
+    	 	  		return this;
     	}
-    	getIpv6(){
+    	getIpv6() : string{
     		return this.ipv6
     	}
-    	
+    	 
     	setIpv6(ipv6 : string){
-    	 	  		 this.ipv6 = ipv6;
-    	 	  		 return this;
+    	 	  		this.ipv6 = ipv6;
+    	 	  		return this;
     	}
-    	getDevicetype(){
+    	getDevicetype() : EnumDeviceType{
     		return this.devicetype
     	}
-    	
+    	 
     	setDevicetype(devicetype : EnumDeviceType){
-    	 	  		 this.devicetype = devicetype;
-    	 	  		 return this;
+    	 	  		this.devicetype = devicetype;
+    	 	  		return this;
     	}
-    	getMake(){
+    	getMake() : string{
     		return this.make
     	}
-    	
+    	 
     	setMake(make : string){
-    	 	  		 this.make = make;
-    	 	  		 return this;
+    	 	  		this.make = make;
+    	 	  		return this;
     	}
-    	getModel(){
+    	getModel() : string{
     		return this.model
     	}
-    	
+    	 
     	setModel(model : string){
-    	 	  		 this.model = model;
-    	 	  		 return this;
+    	 	  		this.model = model;
+    	 	  		return this;
     	}
-    	getOs(){
+    	getOs() : string{
     		return this.os
     	}
-    	
+    	 
     	setOs(os : string){
-    	 	  		 this.os = os;
-    	 	  		 return this;
+    	 	  		this.os = os;
+    	 	  		return this;
     	}
-    	getOsv(){
+    	getOsv() : string{
     		return this.osv
     	}
-    	
+    	 
     	setOsv(osv : string){
-    	 	  		 this.osv = osv;
-    	 	  		 return this;
+    	 	  		this.osv = osv;
+    	 	  		return this;
     	}
-    	getHwv(){
+    	getHwv() : string{
     		return this.hwv
     	}
-    	
+    	 
     	setHwv(hwv : string){
-    	 	  		 this.hwv = hwv;
-    	 	  		 return this;
+    	 	  		this.hwv = hwv;
+    	 	  		return this;
     	}
-    	getH(){
+    	getH() : integer{
     		return this.h
     	}
-    	
+    	 
     	setH(h : integer){
-    	 	  		 this.h = h;
-    	 	  		 return this;
+    	 	  		this.h = h;
+    	 	  		return this;
     	}
-    	getW(){
+    	getW() : integer{
     		return this.w
     	}
-    	
+    	 
     	setW(w : integer){
-    	 	  		 this.w = w;
-    	 	  		 return this;
+    	 	  		this.w = w;
+    	 	  		return this;
     	}
-    	getPpi(){
+    	getPpi() : integer{
     		return this.ppi
     	}
-    	
+    	 
     	setPpi(ppi : integer){
-    	 	  		 this.ppi = ppi;
-    	 	  		 return this;
+    	 	  		this.ppi = ppi;
+    	 	  		return this;
     	}
-    	getPxratio(){
+    	getPxratio() : float{
     		return this.pxratio
     	}
-    	
+    	 
     	setPxratio(pxratio : float){
-    	 	  		 this.pxratio = pxratio;
-    	 	  		 return this;
+    	 	  		this.pxratio = pxratio;
+    	 	  		return this;
     	}
-    	getJs(){
+    	getJs() : integer{
     		return this.js
     	}
-    	
+    	 
     	setJs(js : integer){
-    	 	  		 this.js = js;
-    	 	  		 return this;
+    	 	  		this.js = js;
+    	 	  		return this;
     	}
-    	getFlashver(){
+    	getFlashver() : integer{
     		return this.flashver
     	}
-    	
+    	 
     	setFlashver(flashver : integer){
-    	 	  		 this.flashver = flashver;
-    	 	  		 return this;
+    	 	  		this.flashver = flashver;
+    	 	  		return this;
     	}
-    	getLanguage(){
+    	getLanguage() : EnumIso639_1a2{
     		return this.language
     	}
-    	
+    	 
     	setLanguage(language : EnumIso639_1a2){
-    	 	  		 this.language = language;
-    	 	  		 return this;
+    	 	  		this.language = language;
+    	 	  		return this;
     	}
-    	getCarrier(){
+    	getCarrier() : string{
     		return this.carrier
     	}
-    	
+    	 
     	setCarrier(carrier : string){
-    	 	  		 this.carrier = carrier;
-    	 	  		 return this;
+    	 	  		this.carrier = carrier;
+    	 	  		return this;
     	}
-    	getConnectiontype(){
+    	getConnectiontype() : EnumConnectionType{
     		return this.connectiontype
     	}
-    	
+    	 
     	setConnectiontype(connectiontype : EnumConnectionType){
-    	 	  		 this.connectiontype = connectiontype;
-    	 	  		 return this;
+    	 	  		this.connectiontype = connectiontype;
+    	 	  		return this;
     	}
-    	getIfa(){
+    	getIfa() : string{
     		return this.ifa
     	}
-    	
+    	 
     	setIfa(ifa : string){
-    	 	  		 this.ifa = ifa;
-    	 	  		 return this;
+    	 	  		this.ifa = ifa;
+    	 	  		return this;
     	}
-    	getDidsha1(){
+    	getDidsha1() : string{
     		return this.didsha1
     	}
-    	
+    	 
     	setDidsha1(didsha1 : string){
-    	 	  		 this.didsha1 = didsha1;
-    	 	  		 return this;
+    	 	  		this.didsha1 = didsha1;
+    	 	  		return this;
     	}
-    	getDidmd5(){
+    	getDidmd5() : string{
     		return this.didmd5
     	}
-    	
+    	 
     	setDidmd5(didmd5 : string){
-    	 	  		 this.didmd5 = didmd5;
-    	 	  		 return this;
+    	 	  		this.didmd5 = didmd5;
+    	 	  		return this;
     	}
-    	getDpidsha1(){
+    	getDpidsha1() : string{
     		return this.dpidsha1
     	}
-    	
+    	 
     	setDpidsha1(dpidsha1 : string){
-    	 	  		 this.dpidsha1 = dpidsha1;
-    	 	  		 return this;
+    	 	  		this.dpidsha1 = dpidsha1;
+    	 	  		return this;
     	}
-    	getMacsha1(){
+    	getMacsha1() : string{
     		return this.macsha1
     	}
-    	
+    	 
     	setMacsha1(macsha1 : string){
-    	 	  		 this.macsha1 = macsha1;
-    	 	  		 return this;
+    	 	  		this.macsha1 = macsha1;
+    	 	  		return this;
     	}
-    	getMacmd5(){
+    	getMacmd5() : string{
     		return this.macmd5
     	}
-    	
+    	 
     	setMacmd5(macmd5 : string){
-    	 	  		 this.macmd5 = macmd5;
-    	 	  		 return this;
+    	 	  		this.macmd5 = macmd5;
+    	 	  		return this;
     	}
     	
+    	getGeo() : Geo{
+    	 	return this.geo
+    	}
+    	
+    	setGeo(geo : Geo){
+    	 	  		 this.geo = geo;
+    	 	  		 return this;
+    	}
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -2875,87 +3110,96 @@
     	
     	private ext : Any;
     	 		
-    	getLat(){
+    	getLat() : float{
     		return this.lat
     	}
-    	
+    	 
     	setLat(lat : float){
-    	 	  		 this.lat = lat;
-    	 	  		 return this;
+    	 	  		this.lat = lat;
+    	 	  		return this;
     	}
-    	getLon(){
+    	getLon() : float{
     		return this.lon
     	}
-    	
+    	 
     	setLon(lon : float){
-    	 	  		 this.lon = lon;
-    	 	  		 return this;
+    	 	  		this.lon = lon;
+    	 	  		return this;
     	}
-    	getType(){
+    	getType() : EnumLocationType{
     		return this.type
     	}
-    	
+    	 
     	setType(type : EnumLocationType){
-    	 	  		 this.type = type;
-    	 	  		 return this;
+    	 	  		this.type = type;
+    	 	  		return this;
     	}
-    	getCountry(){
+    	getCountry() : EnumIso3166_1a3{
     		return this.country
     	}
-    	
+    	 
     	setCountry(country : EnumIso3166_1a3){
-    	 	  		 this.country = country;
-    	 	  		 return this;
+    	 	  		this.country = country;
+    	 	  		return this;
     	}
-    	getRegion(){
+    	getRegion() : EnumIso3166_2{
     		return this.region
     	}
-    	
+    	 
     	setRegion(region : EnumIso3166_2){
-    	 	  		 this.region = region;
-    	 	  		 return this;
+    	 	  		this.region = region;
+    	 	  		return this;
     	}
-    	getRegionfips104(){
+    	getRegionfips104() : EnumFips10_4{
     		return this.regionfips104
     	}
-    	
+    	 
     	setRegionfips104(regionfips104 : EnumFips10_4){
-    	 	  		 this.regionfips104 = regionfips104;
-    	 	  		 return this;
+    	 	  		this.regionfips104 = regionfips104;
+    	 	  		return this;
     	}
-    	getMetro(){
+    	getMetro() : EnumGoogleMetroCode{
     		return this.metro
     	}
-    	
+    	 
     	setMetro(metro : EnumGoogleMetroCode){
-    	 	  		 this.metro = metro;
-    	 	  		 return this;
+    	 	  		this.metro = metro;
+    	 	  		return this;
     	}
-    	getCity(){
+    	getCity() : EnumUnct{
     		return this.city
     	}
-    	
+    	 
     	setCity(city : EnumUnct){
-    	 	  		 this.city = city;
-    	 	  		 return this;
+    	 	  		this.city = city;
+    	 	  		return this;
     	}
-    	getZip(){
+    	getZip() : string{
     		return this.zip
     	}
-    	
+    	 
     	setZip(zip : string){
-    	 	  		 this.zip = zip;
-    	 	  		 return this;
+    	 	  		this.zip = zip;
+    	 	  		return this;
     	}
-    	getUtcoffset(){
+    	getUtcoffset() : integer{
     		return this.utcoffset
     	}
-    	
+    	 
     	setUtcoffset(utcoffset : integer){
-    	 	  		 this.utcoffset = utcoffset;
-    	 	  		 return this;
+    	 	  		this.utcoffset = utcoffset;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3072,55 +3316,80 @@
     	private data : Data[];
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getBuyerid(){
+    	getBuyerid() : string{
     		return this.buyerid
     	}
-    	
+    	 
     	setBuyerid(buyerid : string){
-    	 	  		 this.buyerid = buyerid;
-    	 	  		 return this;
+    	 	  		this.buyerid = buyerid;
+    	 	  		return this;
     	}
-    	getYob(){
+    	getYob() : integer{
     		return this.yob
     	}
-    	
+    	 
     	setYob(yob : integer){
-    	 	  		 this.yob = yob;
-    	 	  		 return this;
+    	 	  		this.yob = yob;
+    	 	  		return this;
     	}
-    	getGender(){
+    	getGender() : string{
     		return this.gender
     	}
-    	
+    	 
     	setGender(gender : string){
-    	 	  		 this.gender = gender;
-    	 	  		 return this;
+    	 	  		this.gender = gender;
+    	 	  		return this;
     	}
-    	getKeywords(){
+    	getKeywords() : string{
     		return this.keywords
     	}
-    	
+    	 
     	setKeywords(keywords : string){
-    	 	  		 this.keywords = keywords;
-    	 	  		 return this;
+    	 	  		this.keywords = keywords;
+    	 	  		return this;
     	}
-    	getCustomdata(){
+    	getCustomdata() : string{
     		return this.customdata
     	}
-    	
+    	 
     	setCustomdata(customdata : string){
-    	 	  		 this.customdata = customdata;
-    	 	  		 return this;
+    	 	  		this.customdata = customdata;
+    	 	  		return this;
     	}
     	
+    	getGeo() : Geo{
+    	 	return this.geo
+    	}
+    	
+    	setGeo(geo : Geo){
+    	 	  		 this.geo = geo;
+    	 	  		 return this;
+    	}
+    	getData(): Data[] {
+    		return this.data
+    	}
+    	
+    	setData(data : Data[]){
+    	 	  this.data = data;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3228,26 +3497,43 @@
     	private id : string;
     	private name : string;
     	
-    	private data : Segment[];
+    	private segment : Segment[];
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
     	
+    	getSegment(): Segment[] {
+    		return this.segment
+    	}
+    	
+    	setSegment(segment : Segment[]){
+    	 	  this.segment = segment;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3258,10 +3544,10 @@
     			if(typeof this.name !== 'undefined'){
      				 		json["name"] = this.name;
      				 	}
-    			if(typeof this.data !== 'undefined'){
-    				this.data = [];
-    				this.data.map(function(e){
-    					json["data"].push(e.toJSON());
+    			if(typeof this.segment !== 'undefined'){
+    				this.segment = [];
+    				this.segment.map(function(e){
+    					json["segment"].push(e.toJSON());
     				});
     			}
     			if(typeof this.ext !== 'undefined'){
@@ -3282,18 +3568,18 @@
     	 		}else{
     	 			delete this.name;
     	 		}
-    	 		if(typeof json["data"] !== 'undefined'){
-    	 			if(typeof this.data !== 'undefined'){
-    	 				this.data.length = 0
+    	 		if(typeof json["segment"] !== 'undefined'){
+    	 			if(typeof this.segment !== 'undefined'){
+    	 				this.segment.length = 0
     	 			}else{
-    	 				this.data = [];
+    	 				this.segment = [];
     	 			}
     	 			var self = this;
-    	 			json["data"].map(function(e){
-    	 				self.data.push(new Segment().fromJSON(e))
+    	 			json["segment"].map(function(e){
+    	 				self.segment.push(new Segment().fromJSON(e))
     	 			});	 			
     	 		}else{
-    	 			delete this.data;
+    	 			delete this.segment;
     	 		}
     	 		if(typeof json["ext"] !== 'undefined'){
     	 			if(typeof this.ext !== 'undefined'){
@@ -3314,31 +3600,40 @@
     	
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getName(){
+    	getName() : string{
     		return this.name
     	}
-    	
+    	 
     	setName(name : string){
-    	 	  		 this.name = name;
-    	 	  		 return this;
+    	 	  		this.name = name;
+    	 	  		return this;
     	}
-    	getValue(){
+    	getValue() : string{
     		return this.value
     	}
-    	
+    	 
     	setValue(value : string){
-    	 	  		 this.value = value;
-    	 	  		 return this;
+    	 	  		this.value = value;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3392,15 +3687,24 @@
     	
     	private ext : Any;
     	 		
-    	getCoppa(){
+    	getCoppa() : integer{
     		return this.coppa
     	}
-    	
+    	 
     	setCoppa(coppa : integer){
-    	 	  		 this.coppa = coppa;
-    	 	  		 return this;
+    	 	  		this.coppa = coppa;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3439,15 +3743,32 @@
     	private deals : Deal[];
     	private ext : Any;
     	 		
-    	getPrivate_auction(){
+    	getPrivate_auction() : integer{
     		return this.private_auction
     	}
-    	
+    	 
     	setPrivate_auction(private_auction : integer){
-    	 	  		 this.private_auction = private_auction;
-    	 	  		 return this;
+    	 	  		this.private_auction = private_auction;
+    	 	  		return this;
     	}
     	
+    	getDeals(): Deal[] {
+    		return this.deals
+    	}
+    	
+    	setDeals(deals : Deal[]){
+    	 	  this.deals = deals;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3509,55 +3830,64 @@
     	
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getBidfloor(){
+    	getBidfloor() : float{
     		return this.bidfloor
     	}
-    	
+    	 
     	setBidfloor(bidfloor : float){
-    	 	  		 this.bidfloor = bidfloor;
-    	 	  		 return this;
+    	 	  		this.bidfloor = bidfloor;
+    	 	  		return this;
     	}
-    	getBidfloorcur(){
+    	getBidfloorcur() : EnumIso4217{
     		return this.bidfloorcur
     	}
-    	
+    	 
     	setBidfloorcur(bidfloorcur : EnumIso4217){
-    	 	  		 this.bidfloorcur = bidfloorcur;
-    	 	  		 return this;
+    	 	  		this.bidfloorcur = bidfloorcur;
+    	 	  		return this;
     	}
-    	getAt(){
+    	getAt() : integer{
     		return this.at
     	}
-    	
+    	 
     	setAt(at : integer){
-    	 	  		 this.at = at;
+    	 	  		this.at = at;
+    	 	  		return this;
+    	}
+    	getWseat(): string[] {
+    		 	return this.wseat
+    		 }
+    	 
+    	setWseat(wseat : string[]){
+    		this.wseat = wseat;
+    		return this;
+    	}
+    	getWadomain(): string[] {
+    		 	return this.wadomain
+    		 }
+    	 
+    	setWadomain(wadomain : string[]){
+    		this.wadomain = wadomain;
+    		return this;
+    	}
+    	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
     	 	  		 return this;
     	}
-    	getWseat(){
-    		return this.wseat
-    	}
-    	
-    	setWseat(wseat : string[]){
-    	 	  this.wseat = wseat;
-    	 	  return this;
-    	 }
-    	getWadomain(){
-    		return this.wadomain
-    	}
-    	
-    	setWadomain(wadomain : string[]){
-    	 	  this.wadomain = wadomain;
-    	 	  return this;
-    	 }
-    	
+    	 		
     	
     	 		
     	toJSON(){
@@ -3646,47 +3976,64 @@
     	private seatbid : SeatBid[];
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getBidid(){
+    	getBidid() : string{
     		return this.bidid
     	}
-    	
+    	 
     	setBidid(bidid : string){
-    	 	  		 this.bidid = bidid;
-    	 	  		 return this;
+    	 	  		this.bidid = bidid;
+    	 	  		return this;
     	}
-    	getCur(){
+    	getCur() : EnumIso4217{
     		return this.cur
     	}
-    	
+    	 
     	setCur(cur : EnumIso4217){
-    	 	  		 this.cur = cur;
-    	 	  		 return this;
+    	 	  		this.cur = cur;
+    	 	  		return this;
     	}
-    	getCustomdata(){
+    	getCustomdata() : string{
     		return this.customdata
     	}
-    	
+    	 
     	setCustomdata(customdata : string){
-    	 	  		 this.customdata = customdata;
-    	 	  		 return this;
+    	 	  		this.customdata = customdata;
+    	 	  		return this;
     	}
-    	getNbr(){
+    	getNbr() : integer{
     		return this.nbr
     	}
-    	
+    	 
     	setNbr(nbr : integer){
-    	 	  		 this.nbr = nbr;
-    	 	  		 return this;
+    	 	  		this.nbr = nbr;
+    	 	  		return this;
     	}
     	
+    	getSeatbid(): SeatBid[] {
+    		return this.seatbid
+    	}
+    	
+    	setSeatbid(seatbid : SeatBid[]){
+    	 	  this.seatbid = seatbid;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3777,23 +4124,40 @@
     	private bid : Bid[];
     	private ext : Any;
     	 		
-    	getSeat(){
+    	getSeat() : string{
     		return this.seat
     	}
-    	
+    	 
     	setSeat(seat : string){
-    	 	  		 this.seat = seat;
-    	 	  		 return this;
+    	 	  		this.seat = seat;
+    	 	  		return this;
     	}
-    	getGroup(){
+    	getGroup() : integer{
     		return this.group
     	}
-    	
+    	 
     	setGroup(group : integer){
-    	 	  		 this.group = group;
-    	 	  		 return this;
+    	 	  		this.group = group;
+    	 	  		return this;
     	}
     	
+    	getBid(): Bid[] {
+    		return this.bid
+    	}
+    	
+    	setBid(bid : Bid[]){
+    	 	  this.bid = bid;
+    	 	  return this;
+    	 }
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -3873,135 +4237,144 @@
     	
     	private ext : Any;
     	 		
-    	getId(){
+    	getId() : string{
     		return this.id
     	}
-    	
+    	 
     	setId(id : string){
-    	 	  		 this.id = id;
-    	 	  		 return this;
+    	 	  		this.id = id;
+    	 	  		return this;
     	}
-    	getImpid(){
+    	getImpid() : string{
     		return this.impid
     	}
-    	
+    	 
     	setImpid(impid : string){
-    	 	  		 this.impid = impid;
-    	 	  		 return this;
+    	 	  		this.impid = impid;
+    	 	  		return this;
     	}
-    	getPrice(){
+    	getPrice() : float{
     		return this.price
     	}
-    	
+    	 
     	setPrice(price : float){
-    	 	  		 this.price = price;
-    	 	  		 return this;
+    	 	  		this.price = price;
+    	 	  		return this;
     	}
-    	getAdid(){
+    	getAdid() : string{
     		return this.adid
     	}
-    	
+    	 
     	setAdid(adid : string){
-    	 	  		 this.adid = adid;
-    	 	  		 return this;
+    	 	  		this.adid = adid;
+    	 	  		return this;
     	}
-    	getNurl(){
+    	getNurl() : string{
     		return this.nurl
     	}
-    	
+    	 
     	setNurl(nurl : string){
-    	 	  		 this.nurl = nurl;
-    	 	  		 return this;
+    	 	  		this.nurl = nurl;
+    	 	  		return this;
     	}
-    	getAdm(){
+    	getAdm() : string{
     		return this.adm
     	}
-    	
+    	 
     	setAdm(adm : string){
-    	 	  		 this.adm = adm;
-    	 	  		 return this;
+    	 	  		this.adm = adm;
+    	 	  		return this;
     	}
-    	getAdomain(){
-    		return this.adomain
-    	}
-    	
+    	getAdomain(): string[] {
+    		 	return this.adomain
+    		 }
+    	 
     	setAdomain(adomain : string[]){
-    	 	  this.adomain = adomain;
-    	 	  return this;
-    	 }
-    	getBundle(){
+    		this.adomain = adomain;
+    		return this;
+    	}
+    	getBundle() : string{
     		return this.bundle
     	}
-    	
+    	 
     	setBundle(bundle : string){
-    	 	  		 this.bundle = bundle;
-    	 	  		 return this;
+    	 	  		this.bundle = bundle;
+    	 	  		return this;
     	}
-    	getIurl(){
+    	getIurl() : string{
     		return this.iurl
     	}
-    	
+    	 
     	setIurl(iurl : string){
-    	 	  		 this.iurl = iurl;
-    	 	  		 return this;
+    	 	  		this.iurl = iurl;
+    	 	  		return this;
     	}
-    	getCid(){
+    	getCid() : string{
     		return this.cid
     	}
-    	
+    	 
     	setCid(cid : string){
-    	 	  		 this.cid = cid;
-    	 	  		 return this;
+    	 	  		this.cid = cid;
+    	 	  		return this;
     	}
-    	getCrid(){
+    	getCrid() : string{
     		return this.crid
     	}
-    	
+    	 
     	setCrid(crid : string){
-    	 	  		 this.crid = crid;
-    	 	  		 return this;
+    	 	  		this.crid = crid;
+    	 	  		return this;
     	}
-    	getCat(){
-    		return this.cat
-    	}
-    	
+    	getCat(): EnumContentCategory[] {
+    		 	return this.cat
+    		 }
+    	 
     	setCat(cat : EnumContentCategory[]){
-    	 	  this.cat = cat;
-    	 	  return this;
-    	 }
-    	getAttr(){
-    		return this.attr
+    		this.cat = cat;
+    		return this;
     	}
-    	
+    	getAttr(): EnumCreativeAttribute[] {
+    		 	return this.attr
+    		 }
+    	 
     	setAttr(attr : EnumCreativeAttribute[]){
-    	 	  this.attr = attr;
-    	 	  return this;
-    	 }
-    	getDealid(){
+    		this.attr = attr;
+    		return this;
+    	}
+    	getDealid() : string{
     		return this.dealid
     	}
-    	
+    	 
     	setDealid(dealid : string){
-    	 	  		 this.dealid = dealid;
-    	 	  		 return this;
+    	 	  		this.dealid = dealid;
+    	 	  		return this;
     	}
-    	getH(){
+    	getH() : integer{
     		return this.h
     	}
-    	
+    	 
     	setH(h : integer){
-    	 	  		 this.h = h;
-    	 	  		 return this;
+    	 	  		this.h = h;
+    	 	  		return this;
     	}
-    	getW(){
+    	getW() : integer{
     		return this.w
     	}
-    	
+    	 
     	setW(w : integer){
-    	 	  		 this.w = w;
-    	 	  		 return this;
+    	 	  		this.w = w;
+    	 	  		return this;
     	}
     	
+    	getExt() : Any{
+    	 	return this.ext
+    	}
+    	
+    	setExt(ext : Any){
+    	 	  		 this.ext = ext;
+    	 	  		 return this;
+    	}
+    	 		
     	
     	 		
     	toJSON(){
@@ -4167,6 +4540,7 @@
     	
     	 		
     	
+    	 		
     	
     	 		
     	toJSON(){

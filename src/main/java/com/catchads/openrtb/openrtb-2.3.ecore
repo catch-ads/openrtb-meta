@@ -229,7 +229,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Data">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//string"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//string"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Segment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segment" upperBound="-1"
+        eType="#//Segment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ext" eType="#//Any"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Segment">

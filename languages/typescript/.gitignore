@@ -1,1 +1,4 @@
 /typings/
+/.idea/
+/node_modules/
+/OpenRtb.js

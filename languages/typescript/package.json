@@ -1,3 +1,21 @@
 {
-	
+  "name": "openrtb-tswrap",
+  "version": "0.0.1",
+  "description": "Typescript library to manipulate OpenRTB-2.3 objects",
+  "keywords": [
+    "openrtb",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/catch-ads/openrtb-meta"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "pretest": "tsc test/*Test.ts -t ES5 --module commonjs",
+    "test": "mocha"
+  }
 }
