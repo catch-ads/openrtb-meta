@@ -10,12 +10,18 @@ openrtb objects.
 Currently generators are provided only for the typescript language.
  
 Typescript
+ ---------
  
 Usage exemple
-```typescript
-import * as Rtb from "./openrtb/OpenRtb";
 
-var bidRequest = new Rtb.BidRequest().fromJSON({
+```typescript
+import * as rtb from "./OpenRtb";
+import {json} from "./OpenRtb";
+
+var bidRequest = rtb.build.bidRequest(<json.BidRequest>{
+    // Note that you have the completion here in VSCode when 
+    // you create the inlined json :)
+    // Thanks to the static typing !
     "id": "80ce30c53c16e6ede735f123ef6e32361bfc7b22",
     "at": 1, "cur": [ "USD" ],
     "imp": [
@@ -48,3 +54,4 @@ var bidRequest = new Rtb.BidRequest().fromJSON({
 
 console.log(bidRequest.toJSON());
 ```
+
