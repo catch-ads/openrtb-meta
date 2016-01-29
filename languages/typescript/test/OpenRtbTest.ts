@@ -2,6 +2,7 @@
 /// <reference path="../typings/chai/chai.d.ts" />
 import { expect } from 'chai';
 import * as Rtb from '../OpenRtb';
+import {json} from '../OpenRtb';
 import {BidRequest} from "../OpenRtb";
 
 describe('OpenRtb-2.3 Spec examples', () => {
@@ -275,5 +276,42 @@ describe('OpenRtb objects', () => {
             expect(bidRequest.getAt()).to.equal(json.at);
             expect(bidRequest.getTmax()).to.equal(json.tmax);
         })
+    })
+})
+
+describe('Additional objects', () => {
+    describe('Builder', () => {
+        it('should create BidRequest', () => {
+            const json = {
+                "id": "1234567893",
+                "at": 2,
+                "tmax": 120
+            };
+
+            var bidRequest = Rtb.build.bidRequest()
+                .setId(json.id)
+                .setAt(json.at)
+                .setTmax(json.tmax);
+            expect(bidRequest.getId()).to.equal(json.id);
+            expect(bidRequest.getAt()).to.equal(json.at);
+            expect(bidRequest.getTmax()).to.equal(json.tmax);
+        })
+    })
+})
+
+
+describe('json interface', () => {
+    describe('BidRequest', () => {
+        it('completion should be available in VSCode when editing the json inlined', () => {
+            var bidRequest = Rtb.build.bidRequest(<json.BidRequest>{
+                id : "1348398485",
+                site : <json.Site>{
+                    content : <json.Content>{
+                        context: Rtb.EnumContentContext.MUSIC
+                    }
+                }
+            });
+            expect(bidRequest.getId()).to.equal("1348398485");
+        });
     })
 })

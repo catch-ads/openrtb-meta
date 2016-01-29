@@ -4757,3 +4757,502 @@
     export type EnumUnct = string;
     export type integer = number;
     export type float = number;
+    
+    export class Builder {
+    	bidRequest(json?) : BidRequest {
+    		var result = new BidRequest();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	imp(json?) : Imp {
+    		var result = new Imp();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	banner(json?) : Banner {
+    		var result = new Banner();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	video(json?) : Video {
+    		var result = new Video();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	native(json?) : Native {
+    		var result = new Native();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	site(json?) : Site {
+    		var result = new Site();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	app(json?) : App {
+    		var result = new App();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	publisher(json?) : Publisher {
+    		var result = new Publisher();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	content(json?) : Content {
+    		var result = new Content();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	producer(json?) : Producer {
+    		var result = new Producer();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	device(json?) : Device {
+    		var result = new Device();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	geo(json?) : Geo {
+    		var result = new Geo();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	user(json?) : User {
+    		var result = new User();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	data(json?) : Data {
+    		var result = new Data();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	segment(json?) : Segment {
+    		var result = new Segment();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	regs(json?) : Regs {
+    		var result = new Regs();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	pmp(json?) : Pmp {
+    		var result = new Pmp();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	deal(json?) : Deal {
+    		var result = new Deal();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	bidResponse(json?) : BidResponse {
+    		var result = new BidResponse();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	seatBid(json?) : SeatBid {
+    		var result = new SeatBid();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	bid(json?) : Bid {
+    		var result = new Bid();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    	any(json?) : Any {
+    		var result = new Any();
+    		if(typeof json !== 'undefined'){
+    			result.fromJSON(json);
+    		}
+    		return result;
+    	}
+    	 
+    }
+    
+    export const build = new Builder();
+    
+    export declare module json {
+    	interface BidRequest {
+    		id : string;
+    		test : EnumTest;
+    		at : EnumAuctionType;
+    		tmax : integer;
+    		wseat : string[];
+    		allimps : EnumAllImp;
+    		cur : EnumIso4217[];
+    		bcat : EnumContentCategory[];
+    		badv : string[];
+    		
+    		imp : Imp[];
+    		site : Site;
+    		app : App;
+    		device : Device;
+    		user : User;
+    		regs : Regs;
+    		ext : Any;
+    	}
+    	
+    	interface Imp {
+    		id : string;
+    		displaymanager : string;
+    		displaymanagerserver : string;
+    		instl : EnumInterstitial;
+    		tagid : string;
+    		bidfloor : integer;
+    		bidfloorcur : EnumIso4217;
+    		iframebuster : string[];
+    		
+    		banner : Banner;
+    		video : Video;
+    		native : Native;
+    		pmp : Pmp;
+    		ext : Any;
+    	}
+    	
+    	interface Banner {
+    		w : integer;
+    		h : integer;
+    		wmax : integer;
+    		hmax : integer;
+    		wmin : integer;
+    		hmin : integer;
+    		id : string;
+    		btype : integer[];
+    		battr : integer[];
+    		pos : integer;
+    		mines : string[];
+    		topframe : integer;
+    		expdir : integer[];
+    		api : integer[];
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Video {
+    		mimes : string[];
+    		minduration : integer;
+    		maxduration : integer;
+    		protocol : EnumVideoBidResponseProtocol;
+    		protocols : EnumVideoBidResponseProtocol[];
+    		w : integer;
+    		h : integer;
+    		startdelay : integer;
+    		linearity : integer;
+    		sequence : integer;
+    		battr : EnumCreativeAttribute[];
+    		maxextended : integer;
+    		minbitrate : integer;
+    		maxbitrate : integer;
+    		boxingallowed : integer;
+    		playbackmethod : integer;
+    		delivery : EnumContentDeliveryMethod[];
+    		pos : integer;
+    		api : EnumApiFramework[];
+    		companiontype : EnumVastCompanionType[];
+    		
+    		companionad : Banner[];
+    		ext : Any;
+    	}
+    	
+    	interface Native {
+    		request : string;
+    		ver : string;
+    		api : EnumApiFramework[];
+    		battr : EnumCreativeAttribute[];
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Site {
+    		id : string;
+    		name : string;
+    		domain : string;
+    		cat : EnumContentCategory[];
+    		sectioncat : EnumContentCategory[];
+    		pagecat : EnumContentCategory[];
+    		page : string;
+    		ref : string;
+    		search : string;
+    		mobile : integer;
+    		privacypolicy : integer;
+    		keywords : string;
+    		
+    		publisher : Publisher;
+    		content : Content;
+    		ext : Any;
+    	}
+    	
+    	interface App {
+    		id : string;
+    		name : string;
+    		bundle : string;
+    		domain : string;
+    		storeurl : string;
+    		cat : EnumContentCategory[];
+    		sectioncat : EnumContentCategory[];
+    		pagecat : EnumContentCategory[];
+    		ver : string;
+    		privacypolicy : integer;
+    		paid : integer;
+    		keywords : string;
+    		
+    		user : Publisher;
+    		content : Content;
+    		ext : Any;
+    	}
+    	
+    	interface Publisher {
+    		id : string;
+    		name : string;
+    		cat : EnumContentCategory[];
+    		domain : string;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Content {
+    		id : string;
+    		episode : integer;
+    		title : string;
+    		series : string;
+    		season : string;
+    		url : string;
+    		cat : EnumContentCategory[];
+    		videoquality : EnumVideoQuality;
+    		context : EnumContentContext;
+    		contentrating : string;
+    		userrating : string;
+    		qamediarating : EnumQagMediaRating;
+    		keywords : string;
+    		livestream : integer;
+    		sourcerelationship : integer;
+    		len : integer;
+    		language : EnumIso639_1a2;
+    		embeddable : integer;
+    		
+    		producer : Producer;
+    		ext : Any;
+    	}
+    	
+    	interface Producer {
+    		id : string;
+    		name : string;
+    		cat : EnumContentCategory[];
+    		domain : string;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Device {
+    		ua : string;
+    		dnt : integer;
+    		lmt : integer;
+    		ip : string;
+    		ipv6 : string;
+    		devicetype : EnumDeviceType;
+    		make : string;
+    		model : string;
+    		os : string;
+    		osv : string;
+    		hwv : string;
+    		h : integer;
+    		w : integer;
+    		ppi : integer;
+    		pxratio : float;
+    		js : integer;
+    		flashver : integer;
+    		language : EnumIso639_1a2;
+    		carrier : string;
+    		connectiontype : EnumConnectionType;
+    		ifa : string;
+    		didsha1 : string;
+    		didmd5 : string;
+    		dpidsha1 : string;
+    		macsha1 : string;
+    		macmd5 : string;
+    		
+    		geo : Geo;
+    		ext : Any;
+    	}
+    	
+    	interface Geo {
+    		lat : float;
+    		lon : float;
+    		type : EnumLocationType;
+    		country : EnumIso3166_1a3;
+    		region : EnumIso3166_2;
+    		regionfips104 : EnumFips10_4;
+    		metro : EnumGoogleMetroCode;
+    		city : EnumUnct;
+    		zip : string;
+    		utcoffset : integer;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface User {
+    		id : string;
+    		buyerid : string;
+    		yob : integer;
+    		gender : string;
+    		keywords : string;
+    		customdata : string;
+    		
+    		geo : Geo;
+    		data : Data[];
+    		ext : Any;
+    	}
+    	
+    	interface Data {
+    		id : string;
+    		name : string;
+    		
+    		segment : Segment[];
+    		ext : Any;
+    	}
+    	
+    	interface Segment {
+    		id : string;
+    		name : string;
+    		value : string;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Regs {
+    		coppa : integer;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Pmp {
+    		private_auction : integer;
+    		
+    		deals : Deal[];
+    		ext : Any;
+    	}
+    	
+    	interface Deal {
+    		id : string;
+    		bidfloor : float;
+    		bidfloorcur : EnumIso4217;
+    		at : integer;
+    		wseat : string[];
+    		wadomain : string[];
+    		
+    		ext : Any;
+    	}
+    	
+    	interface BidResponse {
+    		id : string;
+    		bidid : string;
+    		cur : EnumIso4217;
+    		customdata : string;
+    		nbr : integer;
+    		
+    		seatbid : SeatBid[];
+    		ext : Any;
+    	}
+    	
+    	interface SeatBid {
+    		seat : string;
+    		group : integer;
+    		
+    		bid : Bid[];
+    		ext : Any;
+    	}
+    	
+    	interface Bid {
+    		id : string;
+    		impid : string;
+    		price : float;
+    		adid : string;
+    		nurl : string;
+    		adm : string;
+    		adomain : string[];
+    		bundle : string;
+    		iurl : string;
+    		cid : string;
+    		crid : string;
+    		cat : EnumContentCategory[];
+    		attr : EnumCreativeAttribute[];
+    		dealid : string;
+    		h : integer;
+    		w : integer;
+    		
+    		ext : Any;
+    	}
+    	
+    	interface Any {
+    		
+    	}
+    }
+

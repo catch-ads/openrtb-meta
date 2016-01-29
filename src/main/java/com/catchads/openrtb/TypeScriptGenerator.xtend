@@ -44,6 +44,20 @@ public class TypeScriptGenerator {
     «FOR content : pkg.eContents»
      	«generateCode(content)»
     «ENDFOR»
+    
+    export class Builder {
+    	«FOR content : pkg.eContents»
+    		«generateBuildFunction(content)»
+    	«ENDFOR»
+    }
+    
+    export const build = new Builder();
+    
+    export declare module json {
+    	«FOR content : pkg.eContents»
+    	    «generateInterface(content)»
+    	«ENDFOR»
+    }
   '''
 
  def dispatch generateCode(EObject eObj) '''
@@ -217,6 +231,44 @@ def dispatch generateGetters(EReference ref) '''
  	 	 	  return this;
  	 	 }
  	 «ENDIF»
+ '''
+ 
+ def dispatch generateBuildFunction(EClass kls) '''
+ 	«kls.name.toFirstLower»(json?) : «kls.name» {
+ 		var result = new «kls.name»();
+ 		if(typeof json !== 'undefined'){
+ 			result.fromJSON(json);
+ 		}
+ 		return result;
+ 	}
+ 
+ '''
+  
+ def dispatch generateInterface(EObject eObject) '''
+ '''
+ 
+  def dispatch generateInterface(EClass kls) '''
+		interface «kls.name» {
+			«FOR attr : kls.EAttributes»
+				«IF attr.upperBound == 1»
+					«attr.name» : «attr.EType.name»;
+				«ELSE»
+					«attr.name» : «attr.EType.name»[];
+				«ENDIF»
+			«ENDFOR»
+			
+			«FOR ref : kls.EReferences»
+				«IF ref.upperBound == 1»
+					«ref.name» : «ref.EType.name»;
+				«ELSE»
+					«ref.name» : «ref.EType.name»[];
+				«ENDIF»
+			«ENDFOR»
+		}
+		
+	'''
+  
+ def dispatch generateBuildFunction(EObject eObject) '''
  '''
  
   def doEMFSetup() {
